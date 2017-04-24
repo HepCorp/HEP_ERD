@@ -19,3 +19,18 @@ select * from haw.team;
 INSERT INTO haw.team_region (team_no, region_no) values (1, 2);
 
 select * from haw.team_region;
+
+select A.badge_no
+     , B.badge_no
+     , A.required_yn
+     , C.badge_cnt
+  from haw.quest_badge A
+       LEFT OUTER JOIN haw.member_quest_log B ON (A.badge_no = B.badge_no)
+       LEFT OUTER JOIN haw.quest C ON (A.quest_no = C.quest_no)
+ where quest_no = 3 
+
+' 6   6   Y    4'
+' 7   7   Y    4'
+' 8   null N   4'
+' 9   9    N   4'
+' 10  null N   4'
