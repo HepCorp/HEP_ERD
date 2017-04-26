@@ -11,7 +11,7 @@ select * from haw.city;
 select * from haw.region;
 
 INSERT INTO haw.arms (arms_nm, description, arms_img, color, enabled_yn) VALUES ('EAGLES', '맑은 영혼을 지닌 독수리처럼 멋지게 날개를 펼쳐보세요!', '/resources/images/eagle.png', '336699', true);
-INSERT INTO haw.team (team_nm, team_tot, description) values ('EAGLES', 10, '맑은 영혼을 지닌 독수리처럼 멋지게 날개를 펼쳐보세요!');
+INSERT INTO haw.team (arms_no, team_nm, team_tot, description) values (1, 'EAGLES', 10, '맑은 영혼을 지닌 독수리처럼 멋지게 날개를 펼쳐보세요!');
                       
 select * from haw.team;
 
